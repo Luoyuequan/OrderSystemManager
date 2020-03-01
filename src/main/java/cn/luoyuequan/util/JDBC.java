@@ -49,15 +49,26 @@ public class JDBC {
             // 调用SQL
 //            insert 获取返回值 Statement.RETURN_GENERATED_KEYS
             pst = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            for (Object[] param : params) {
-                // 参数赋值
-                for (int i = 0; i < param.length; i++) {
-                    pst.setObject(i + 1, param[i]);
+            if (params.length > 1) {
+                for (Object[] param : params) {
+                    // 参数赋值
+                    for (int i = 0; i < param.length; i++) {
+                        pst.setObject(i + 1, param[i]);
+                    }
+                    pst.addBatch();
                 }
-                pst.addBatch();
+                // 批量操作
+                affectedLine = pst.executeBatch().length;
+            } else {
+                // 参数赋值
+                if (params.length == 1) {
+                    for (int i = 0; i < params[0].length; i++) {
+                        pst.setObject(i + 1, params[0][i]);
+                    }
+                }
+                // 非批量操作
+                affectedLine = pst.executeUpdate();
             }
-
-            affectedLine = pst.executeBatch().length;
             conn.commit();
 //            对于批量操作时，使用批处理
 //            获取insert添加成功的记录 主键值

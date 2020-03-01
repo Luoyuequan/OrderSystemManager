@@ -159,14 +159,14 @@ public class GoodsService {
      * @return 清空结果 提示信息json格式字符串
      */
     public String deleteRecycle(String filePath) {
-        Map<Object, Object> noticeMsg = new HashMap<>();
+        Map<Object, Object> noticeMsg = new HashMap<>(16);
         List<Map> deleteData = this.goodsImpl.queryRecycleInfors();
         int deleteResult = this.goodsImpl.deleteRecycle();
         if (deleteResult > 0) {
             boolean deleteImgsBool = true;
             for (Map data : deleteData) {
                 File deleteImgFile = new File(filePath + data.get("img"));
-//                deleteImgFile.getAbsolutePath()
+                System.out.println(deleteImgFile.getAbsolutePath());
                 if (!deleteImgFile.delete()) {
                     deleteImgsBool = false;
                 }

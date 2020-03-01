@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <title>网上订餐系统后台管理</title>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/w3.css" rel="stylesheet"/>
     <script src="../js/jquery-3.4.1.js" type="text/javascript" charset="UTF-8"></script>

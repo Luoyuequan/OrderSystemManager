@@ -38,7 +38,7 @@ function onReturnInfor(data) {
     console.log(data);
     // var alertObj = $("#alert");
     if (eval(data.state)) {
-        notice(data.msg + "<br>"+"3秒后自动跳转页面...");
+        notice(data.msg + "<br>" + "3秒后自动跳转页面...");
         var a = setTimeout(function () {
             window.location.href = "page/home.jsp";
         }, 3 * 1000);

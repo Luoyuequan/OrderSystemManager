@@ -1,11 +1,11 @@
 $(function () {
     // 用户会话已超时  重新登录
-    // if ($("#username").text() == "null,你好!") {
-    //     warning("连接已断开,请重新登录!<br>3秒后自动跳转页面...");
-    //     var a = setTimeout(function () {
-    //         window.location.href = "../index.jsp";
-    //     }, 3 * 1000);
-    // }
+    if ($("#username").text() == "null,你好!") {
+        warning("连接已断开,请重新登录!<br>3秒后自动跳转页面...");
+        var a = setTimeout(function () {
+            window.location.href = "../index.jsp";
+        }, 3 * 1000);
+    }
 
     var data = {
         "url": "NavList",

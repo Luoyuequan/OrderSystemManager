@@ -1,20 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <title>后台登录</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/jquery-3.4.1.js" type="text/javascript" charset="GB2312"></script>
-    <script src="js/publicAjax.js" type="text/javascript" charset="GB2312"></script>
-    <script src="js/checkStandard.js" type="text/javascript" charset="GB2312"></script>
-    <script src="js/login.js" type="text/javascript" charset="GB2312"></script>
+    <script src="js/jquery-3.4.1.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/publicAjax.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/checkStandard.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/login.js" type="text/javascript" charset="UTF-8"></script>
     <link href="css/w3.css" rel="stylesheet" type="text/css"/>
     <link href="css/jquery.growl.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery.growl.js" type="text/javascript" charset="GB2312"></script>
-    <script src="js/publicGrowl.js" type="text/javascript" charset="GB2312"></script>
+    <script src="js/jquery.growl.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="js/publicGrowl.js" type="text/javascript" charset="UTF-8"></script>
 </head>
 <body>
-<div style="width: 30%;margin: 10% auto;" class="w3-card-4" >
+<div style="width: 30%;margin: 10% auto;" class="w3-card-4">
     <div class="w3-container w3-blue">
         <h2>后台管理登录</h2>
     </div>
